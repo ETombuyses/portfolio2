@@ -1,0 +1,25 @@
+{
+  "name": "portfolio2",
+  "version": "1.0.0",
+  "description": "My new portfolio ! I will publish it once it is finished.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ETombuyses/portfolio2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ETombuyses/portfolio2/issues"
+  },
+  "homepage": "https://github.com/ETombuyses/portfolio2#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.1",
+    "sass": "^1.17.2"
+  }
+}
