@@ -1,0 +1,26 @@
+@mixin fontface ($name, $woff2, $woff, $style, $weight) {
+  @font-face {
+    font-family: $name;
+    src: url($woff2) format("woff2"), url($woff) format("woff");
+    font-style: $style;
+    font-weight: $weight; 
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin big {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

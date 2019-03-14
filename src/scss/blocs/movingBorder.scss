@@ -1,0 +1,37 @@
+// .movingBorder {
+//   position: absolute;
+//   width: 100px;
+//   height: 100px;
+//   background: linear-gradient(45deg, rgb(0, 114, 80), rgb(1, 221, 155));
+//   z-index: 4;
+// }
+
+// .movingBorder:nth-child(1) {
+//   left: -15px;
+//   top: -16px;
+//   width: 80vw;
+//   height: 17px;
+// }
+
+// .movingBorder:nth-child(2) {
+//   right: -16px;
+//   top: -15px;
+//   width: 17px;
+//   height: calc(70vh + 1px);
+// }
+
+// .movingBorder:nth-child(3) {
+//   bottom: -16px;
+//   right: -15px;
+//   width: 80vw;
+//   height: 17px;
+//   background: linear-gradient(45deg, rgb(1, 221, 155), rgb(0, 114, 80),);
+// }
+
+// .movingBorder:nth-child(4) {
+//   left: -16px;
+//   top: -15px;
+//   width: 17px;
+//   height: calc(70vh + 1px);
+//   background: linear-gradient(45deg, rgb(1, 221, 155), rgb(0, 114, 80),);
+// }

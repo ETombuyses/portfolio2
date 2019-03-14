@@ -1,6 +1,14 @@
 @import 'vendors/reset.scss';
+
+@import 'config/mixins.scss';
+@import 'config/keyframes.scss';
+@import 'config/fonts.scss';
+
+
 @import 'blocs/welcome.scss';
 @import 'blocs/visitCard.scss';
 @import 'blocs/cardContent.scss';
+@import 'blocs/movingBorder.scss';
+@import 'blocs/flipCard.scss';
 
 

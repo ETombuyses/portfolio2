@@ -1,39 +1,49 @@
 .visitCard {
-  width: 80vw;
-  height: 70vh;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
   display: flex;
-  // border: 20px solid black;
+  border: 15px solid white;
+  
   // box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.397);
-  padding: 20px;
-  background: black;
+  // padding: 20px;
+  // background: black;
 
+  @include pc {
+    width: 1025px;
+    height: 475px;
+    top: 50%;
+    left: 50%;
+    background: white;
+    transform: translateY(-50%) translateX(-50%);
+    border: none;
+
+  }
 }
 
-.visitCard__picture {
-  background: black;
-  width: 30%;
+.visitCard__flipCard {
   position: relative;
+  display: none;
+
+  @include pc {
+    display: block;
+  }
 }
 
-.picture__img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  transform: translate(calc(-50% - 10px), -50%);
-  padding: 5px;
-  background: white;
-}
+
 
 .visitcard__content {
   text-align: center;
-  width: 70%;
-  background: white;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
+  background: black;
+
+  @include pc {
+    width: 65%;
+    background: white;
+
+  }
 }
