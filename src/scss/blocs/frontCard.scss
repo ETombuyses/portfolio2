@@ -1,0 +1,33 @@
+
+.frontCard__picture {
+  height: 100%;
+  transform: translateX(15px) translateY(1px);
+}
+
+.frontCard__text {
+  color: $lightgreen;
+  padding: 5px;
+  border: 2px solid $lightgreen;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  animation: shaking-mobile 1s infinite alternate;
+  
+  @media (orientation: landscape) {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+
+  @include pc {
+    position: absolute;
+    bottom: 10%;
+    transform: translateX(-50%);
+    left: 50%;
+    font-size: 30px;
+    animation: shaking 1s infinite alternate;
+
+  }
+}

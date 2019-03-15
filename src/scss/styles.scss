@@ -1,5 +1,6 @@
 @import 'vendors/reset.scss';
 
+@import 'config/colors.scss';
 @import 'config/mixins.scss';
 @import 'config/keyframes.scss';
 @import 'config/fonts.scss';
@@ -10,5 +11,5 @@
 @import 'blocs/cardContent.scss';
 @import 'blocs/movingBorder.scss';
 @import 'blocs/flipCard.scss';
-
+@import 'blocs/frontCard.scss';
 
