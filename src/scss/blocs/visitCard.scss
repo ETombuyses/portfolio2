@@ -23,11 +23,6 @@
 
 .visitCard__flipCard {
   position: relative;
-  margin-bottom: 30px;
-
-  @include pc {
-    margin-bottom: 0;
-  }
 }
 
 
@@ -40,6 +35,10 @@
   align-items: center;
   justify-content: center;
   background: black;
+
+  @media (max-height: 450px) and (orientation: landscape) {
+    height: 90%;
+  }
 
   @include pc {
     width: 65%;

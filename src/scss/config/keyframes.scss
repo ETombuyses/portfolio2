@@ -44,3 +44,30 @@
     transform: rotate(-30deg);
   }
 }
+
+@keyframes visible {
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes grow-up {
+
+  25%{
+    height: 10px;
+    width: calc(100vw - 28px);
+
+  }
+
+  50% {
+    height: calc(100vh - 28px);
+    width: calc(100vw - 28px);
+  }
+  
+  100% {
+    height: calc(100vh - 28px);
+    width: calc(100vw - 28px);
+    bottom: 0px;
+  }
+}

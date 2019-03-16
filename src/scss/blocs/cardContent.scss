@@ -5,8 +5,10 @@
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 700px) and (orientation: landscape) {
+  @media (max-height: 450px) and (orientation: landscape) {
     width: 600px;
+    // padding-top: 30px;
+    // padding-bottom: 30px;
   }
 
   @include pc {
@@ -25,6 +27,7 @@
   overflow: hidden;
   animation: text 2.5s steps(18, end);
 
+  
   @include pc {
     font-size: 60px;
     color: black;
@@ -77,6 +80,12 @@
     box-shadow: black 0px 0px 0px 0.01px inset;
     transition: box-shadow 0.5s;
     // background: transparent;
+
+    @media (max-height: 450px) and (orientation: landscape) {
+      width: 450px;
+      height: 60px;
+
+    }
 
     @include pc {
       width: 500px;
