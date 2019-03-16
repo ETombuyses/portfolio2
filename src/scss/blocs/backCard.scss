@@ -8,7 +8,7 @@
   overflow: hidden;
 
   &.is-flipped {
-    animation: grow-up 3s 1s forwards;
+    animation: grow-up 2s 0.4s forwards;
   }
 
   @include pc {
@@ -26,7 +26,7 @@
   font-weight: bold;
 
   &.is-visible {
-    animation: visible 1s 3s forwards;
+    animation: visible 1s 1s forwards;
   }
 
   @include pc {
@@ -42,7 +42,7 @@
   font-size: 18px;
 
   &.is-visible {
-    animation: visible 1s 3.5s forwards;
+    animation: visible 1s 1.5s forwards;
   }
 
   strong {

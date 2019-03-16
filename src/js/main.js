@@ -8,10 +8,6 @@ flipCard.addEventListener('click', function() {
 
 /* Show content once the card has been flipped */
 
-//to fix : animation doesn't always work on mobile version (
-//if the card is flipped on desktop, then we resize to mobile, 
-//then we close the card, we reopen it, then we resize to desktop, 
-//then we flip the card on desktop, then we resize to mobile:  the card stays closed)
 var backCardTitle = document.getElementById('backCardTitle');
 var backCard = document.getElementById('backCard');
 var backCardText = document.getElementById('backCardText');
