@@ -1,4 +1,61 @@
-/* Flip the car on click */
+/* burger menu */
+
+var nav = document.getElementById('navigation');
+var burgerIcon = document.getElementById('burgerIcon');
+var pageLinks = document.getElementById('pageLinks');
+var externalLinks = document.getElementById('externalLinks');
+
+nav.addEventListener('click', (event) => {
+  event.stopPropagation();
+  if (nav.classList.contains('is-open')) {     
+     pageLinks.classList.remove('is-open');
+     externalLinks.classList.remove('is-open');
+
+     setTimeout(() =>{
+      nav.classList.remove('is-open');
+      burgerIcon.classList.remove('is-open');
+
+     }, 200);
+  } else {
+    nav.classList.add('is-open');
+    burgerIcon.classList.add('is-open');
+
+    setTimeout(() => {
+      pageLinks.classList.add('is-open');
+      externalLinks.classList.add('is-open');
+     }, 400);
+  }
+});
+
+
+document.addEventListener('click', () => {
+  
+  if (nav.classList.contains('is-open')) {
+    pageLinks.classList.remove('is-open');
+     externalLinks.classList.remove('is-open');
+
+     setTimeout(() =>{
+      nav.classList.remove('is-open');
+      burgerIcon.classList.remove('is-open');
+
+     }, 200);
+  }
+})
+
+//prevent clicking on nav when clicking on an external link
+//not working yet
+
+var links = document.querySelectorAll('#navLink');
+
+for (let i = 0; i > links.length; i++) {
+  links[i].addEventListener('click', (event) => {
+  event.stopPropagation(); 
+  });
+}
+
+
+
+/* Flip the card on click */
 var flipCard = document.getElementById('flipCard');
 
 flipCard.addEventListener('click', function() {

@@ -1,0 +1,17 @@
+.pageLinks__title {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.pageLinks__pagelinkList {
+  text-align: center;
+  font-size: 16px;
+}
+
+
+.pagelinkList__item:not(:last-child) {
+  padding-bottom: 10px; 
+}

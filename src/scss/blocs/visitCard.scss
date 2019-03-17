@@ -6,6 +6,7 @@
   border: 15px solid white;
   flex-direction: column-reverse;
   align-items: center;
+  z-index: 2;
   // padding: 20px;
   // background: black;
 
@@ -37,7 +38,7 @@
   background: black;
 
   @media (max-height: 450px) and (orientation: landscape) {
-    height: 90%;
+    height: 80%;
   }
 
   @include pc {

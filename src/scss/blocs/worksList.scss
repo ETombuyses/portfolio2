@@ -1,0 +1,21 @@
+.worksList__item {
+  width: 100%;
+  margin-top: 20px;
+
+  @media (min-width: 500px) {
+    width: 40%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @media (min-width: 1000px) {
+    
+    max-width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  img {
+    width: 100%;
+  }
+}

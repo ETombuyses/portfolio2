@@ -1,0 +1,29 @@
+.works {
+  background: $lightgreen;
+  padding: 15px;
+  width: 100vw;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  z-index: 2;
+  position: absolute;
+}
+
+
+.works__title {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.works__worksList {
+  display: flex;
+  flex-wrap: wrap;
+  // max-width: 80vw;
+  justify-content: center;
+  // background: red;
+  margin: auto;
+}

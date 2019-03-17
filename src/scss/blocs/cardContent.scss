@@ -25,7 +25,8 @@
   font-size: 30px;
   color: white;
   overflow: hidden;
-  animation: text 2.5s steps(18, end);
+  opacity: 0;
+  animation: text 2.5s 0.5s steps(18, end) forwards;
 
   
   @include pc {

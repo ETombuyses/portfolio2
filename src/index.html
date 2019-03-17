@@ -1,57 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="scss/styles.scss">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <script defer src="js/main.js"></script>
   <title>Emilie Tombuyses - Front-end developer</title>
 </head>
+
 <body>
   <header>
-
+    <nav id='navigation' class="menu">
+      <div id='burgerIcon' class="menu__burgerIcon">
+        <div></div>
+      </div>
+      <div id='pageLinks' class="menu__pageLinks pageLinks">
+        <h4 class="pageLinks__title">Menu</h4>
+        <ul class="pageLinks__pagelinkList pagelinkList">
+          <li class="pagelinkList__item"><a href="#">Home</a></li>
+          <li class="pagelinkList__item"><a href="#works">My works</a></li>
+        </ul>
+      </div>
+      <div id='externalLinks' class="menu__externalLinks">
+        <h4 class="externalLinks__title">Contact</h4>
+        <ul class="externalLinks__externalLinkList">
+          <li class="externalLinkList__item"><a href="https://github.com/ETombuyses" target="_blank"><i class="fab  fa-github fa-2x" title="My github"></i></a></li>
+          <li class="externalLinkList__item"><a id='navLink' href="https://www.linkedin.com/in/emilie-tombuyses-front-end-developer/" target="_blank"><i class="fab fa-2x fa-linkedin-in" title="My LinkedIn page"></i></a></li>
+          <li class="externalLinkList__item"><a id='navLink' href="mailto:e.tombuyses@gmail.com"><i class="fas fa-2x fa-envelope" title="My email"></i></a></li>
+          <li class="externalLinkList__item"><a id='navLink' href="assets/documents/CV Emilie Tombuyses.pdf" download=""><i class="fas fa-2x fa-file" title="My resume"></i></a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
-  <main class="welcome">
-    <div class="visitCard">
-      <div class="movingBorder"></div>
-      <div class="movingBorder"></div>
-      <div class="movingBorder"> </div>
-      <div class="movingBorder"></div>
-      <div class="visitCard__flipCard flipCard">
-        <div id="flipCard" class="flipCard__inner">
-          <div class='flipCard__frontCard frontCard'>
-           <img class="frontCard__picture" src="assets/images/emilie-tombuyses.jpg" alt="Emilie Tombuyses">
-           <p class="frontCard__text">click me</p>
-          </div>
-          <div id='backCard' class="flipCard__backCard backCard">
-            <h3 id='backCardTitle' class="backCard__title">Hello, nice to meet you!</h3>
-            <p id='backCardText' class='backCard__text'>I entered the world of web development a few months ago and 
-              I am currently looking for a 3 months <strong>internship in Paris</strong> 
-              between July and 21 September. I am also interested in an <strong>apprenticeship 
-              for next year</strong>. Don't hesitate to contact me if you are interested.</p>
+
+  <main>
+    <div id='background' class="welcome">
+      <div class="visitCard">
+        <div class="movingBorder"></div>
+        <div class="movingBorder"></div>
+        <div class="movingBorder"> </div>
+        <div class="movingBorder"></div>
+        <div class="visitCard__flipCard flipCard">
+          <div id="flipCard" class="flipCard__inner">
+            <div class='flipCard__frontCard frontCard'>
+              <img class="frontCard__picture" src="assets/images/emilie-tombuyses.jpg" alt="Emilie Tombuyses">
+              <p class="frontCard__text">click me</p>
+            </div>
+            <div id='backCard' class="flipCard__backCard backCard">
+              <h3 id='backCardTitle' class="backCard__title">Hello, nice to meet you!</h3>
+              <p id='backCardText' class='backCard__text'>I entered the world of web development a few months ago and
+                I am currently looking for a 3 months <strong>internship in Paris</strong>
+                between July and 21 September. I am also interested in an <strong>apprenticeship
+                  for next year</strong>. Don't hesitate to contact me if you are interested.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="visitcard__content">
-        <div class="cardContent">
-          <h1 class="cardContent__name">Emilie Tombuyses</h1>
-          <h2 class="cardContent__function">Front-end developer</h2>
-          <ul class="cardContent__importantInfos importantInfos">
+        <div class="visitcard__content">
+          <div class="cardContent">
+            <h1 class="cardContent__name">Emilie Tombuyses</h1>
+            <h2 class="cardContent__function">Front-end developer</h2>
+            <ul class="cardContent__importantInfos importantInfos">
               <li>Paris</li>
               <li aria-hidden="true">•</li>
               <li><a class="importantInfos__link" href="https://www.hetic.net/" target="_blank">HETIC</a></li>
               <li aria-hidden="true">•</li>
-              <li><a class="importantInfos__link" href="https://www.hetic.net/formations/bachelor-web/programme-bachelor-web" target="_blank">Bachelor Web</a></li>
+              <li><a class="importantInfos__link"
+                  href="https://www.hetic.net/formations/bachelor-web/programme-bachelor-web" target="_blank">Bachelor
+                  Web</a></li>
             </ul>
+          </div>
         </div>
       </div>
     </div>
-    
+    <div id='works' class="works">
+      <h3 class="works__title">My works</h3>
+      <ul class="works__worksList worksList">
+        <li class="worksList__item"><a href="" target="_blank"><img src="assets/images/400x300.png" alt=""></a></li>
+        <li class="worksList__item"><a href="" target="_blank"><img src="assets/images/400x300.png" alt=""></a></li>
+        <li class="worksList__item"><a href="" target="_blank"><img src="assets/images/400x300.png" alt=""></a></li>
+      </ul>
+
+
+    </div>
   </main>
   <footer>
 
   </footer>
-  
+
 </body>
+
 </html>

@@ -1,0 +1,17 @@
+.externalLinks__title {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.externalLinks__externalLinkList {
+  text-align: center;
+  font-size: 16px;
+}
+
+
+.externalLinkList__item:not(:last-child) {
+  padding-bottom: 10px; 
+}
