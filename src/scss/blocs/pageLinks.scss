@@ -9,9 +9,20 @@
 .pageLinks__pagelinkList {
   text-align: center;
   font-size: 16px;
+
+  a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid $lightgreen;
+  
+  // box-shadow: 0px -2px $lightgreen inset;
+  // transition: box-shadow 0.5s, color 0.5s;
+  }
 }
 
 
 .pagelinkList__item:not(:last-child) {
   padding-bottom: 10px; 
 }
+
+
