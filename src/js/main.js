@@ -79,9 +79,9 @@ flipCard.addEventListener('click', function() {
     backCardText.classList.toggle('is-visible');
   }
  
-
+  //if we resize the window when the card is flipped
   window.addEventListener('resize' ,function() {
-    if (window.innerWidth > 1099 && window.innerHeight > 699) {
+    if (window.innerWidth > 1099 && window.innerHeight > 600) {
       backCardTitle.classList.remove('is-visible');
       backCard.classList.remove('is-flipped');
       backCardText.classList.remove('is-visible');
