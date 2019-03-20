@@ -1,6 +1,8 @@
 .worksList__item {
   width: 100%;
   margin-top: 20px;
+  position: relative;
+
 
   @media (min-width: 500px) {
     width: 40%;
@@ -18,4 +20,28 @@
   img {
     width: 100%;
   }
+}
+
+.worksList__blur {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.596);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s;
+
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+.worksList__title {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
 }

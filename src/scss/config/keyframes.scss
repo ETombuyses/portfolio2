@@ -73,3 +73,31 @@
     bottom: 0px;
   }
 }
+
+
+@keyframes waow {
+  0% {
+    transform: rotate(45deg) scale(1.1);
+  }
+
+
+  25% {
+    transform: rotate(135deg) scale(0.2);  
+
+
+  }
+
+  50% {
+    transform: rotate(225deg) scale(1.1);
+  }
+
+  75% {
+    transform: rotate(315deg) scale(0.2);
+
+  }
+
+  100% {
+    transform: rotate(405deg) scale(1.1);
+  }
+
+}
