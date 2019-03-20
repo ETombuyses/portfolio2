@@ -3,8 +3,8 @@
 const background = document.getElementById('background');
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
-const numberOfSquaresPerLine = windowWidth /65;
-const numberOfLines = windowHeight / 65;
+let numberOfSquaresPerLine = windowWidth /75;
+let numberOfLines = windowHeight / 75;
 
 //width of square in CSS
 const width = 60;
@@ -23,7 +23,7 @@ function createSquare(x, y) {
 }
 
 function squares() {
-  if (window.innerWidth > 1099 && window.innerHeight > 600) {
+  if (window.innerWidth > 899) {
     for (let j = 1; j <= numberOfLines; j++) {
       for (let i = 1; i <= numberOfSquaresPerLine; i++) {
         createSquare(x, y);
@@ -40,6 +40,10 @@ squares();
 window.addEventListener('resize', () => {
   x = 15;
   y = 15;
+  windowWidth = window.innerWidth;
+  windowHeight = window.innerHeight;
+  numberOfSquaresPerLine = windowWidth /75;
+  numberOfLines = windowHeight / 75;
   setTimeout(() => {
     squares();
   }, 100)
@@ -122,7 +126,7 @@ let backSide = false;
 flipCard.addEventListener('click', () => {
   backSide = !backSide;
 
-  if (window.innerWidth < 1200) {
+  if (window.innerWidth < 900) {
     backCardTitle.classList.toggle('is-visible');
     backCard.classList.toggle('is-flipped');
     backCardText.classList.toggle('is-visible');
