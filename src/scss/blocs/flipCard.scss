@@ -46,11 +46,11 @@
     transform: translateX(-50%);
   }
 
-  @include tablet {
-    width: 200px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  // @include tablet {
+  //   width: 200px;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  // }
 
   @include pc {
     left: 50%;

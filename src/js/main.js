@@ -3,7 +3,7 @@
 const background = document.getElementById('background');
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
-const numberOfSquaresPerLine = windowWidth / 65;
+const numberOfSquaresPerLine = windowWidth /65;
 const numberOfLines = windowHeight / 65;
 
 //width of square in CSS

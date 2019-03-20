@@ -11,7 +11,8 @@
   // background: black;
 
   @include pc {
-    width: 1025px;
+    width: 90%;
+    max-width: 990px;
     height: 475px;
     background: white;
     top: 50%;
