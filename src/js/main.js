@@ -93,7 +93,7 @@ document.addEventListener('click', () => {
 })
 
 //prevent clicking on nav when clicking on an external link
-const links = document.querySelectorAll('#navLink');
+const links = document.querySelectorAll('.navLink');
 
 links.forEach((link) => {
   link.addEventListener('click', (event) => {
