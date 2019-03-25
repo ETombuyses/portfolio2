@@ -90,19 +90,32 @@ class Parallax {
   }
 
   update() {
-    this.currentDelta.x += (this.mouseDelta.x - this.currentDelta.x) * this.smoothing;
-    this.currentDelta.y += (this.mouseDelta.y - this.currentDelta.y) * this.smoothing;
-    let movement = this.getMovement();
-    this.elements.forEach(element => {
-      let depth = element.getAttribute("data-depth");
-      let target = { x: movement.x * depth, y: movement.y * depth };
+    if (window.innerWidth < 899) {
+      this.elements.forEach(element => {
+        let target = { x: 0, y: 0 };
 
-      TweenMax.set(element, {
-        x: target.x + "px",
-        y: target.y + "px",
-        force3D: true
+        TweenMax.set(element, {
+          x: target.x + "px",
+          y: target.y + "px",
+          force3D: true
+        });
       });
-    });
+    } else {
+      this.currentDelta.x += (this.mouseDelta.x - this.currentDelta.x) * this.smoothing;
+      this.currentDelta.y += (this.mouseDelta.y - this.currentDelta.y) * this.smoothing;
+      let movement = this.getMovement();
+      this.elements.forEach(element => {
+        let depth = element.getAttribute("data-depth");
+        let target = { x: movement.x * depth, y: movement.y * depth };
+
+        TweenMax.set(element, {
+          x: target.x + "px",
+          y: target.y + "px",
+          force3D: true
+        });
+      });
+    }
+    
   }
 }
 
@@ -116,6 +129,10 @@ function update() {
   requestAnimationFrame(update);
 }
 update();
+
+window.addEventListener('resize', () => {
+  update();
+})
 
 //parallax projects
 const works = document.getElementById('works');
