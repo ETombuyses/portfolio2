@@ -10,6 +10,8 @@ let numberOfLines = windowHeight / 75;
 const width = 60;
 let x = 15;
 let y = 15;
+const fragment = document.createDocumentFragment();
+
 
 function createSquare(x, y) {
   let square = document.createElement('div');
@@ -19,7 +21,7 @@ function createSquare(x, y) {
   window.addEventListener('resize', () => {
     square.remove();
   })
-  background.appendChild(square);
+  fragment.appendChild(square);
 }
 
 function squares() {
@@ -32,6 +34,7 @@ function squares() {
       x = 15;
       y += 20 + width;
     }
+    background.appendChild(fragment);
   }
 }
 
@@ -48,6 +51,88 @@ window.addEventListener('resize', () => {
     squares();
   }, 100)
 })
+
+
+
+
+
+
+/* Parallax on mousemove */
+
+// to work, elements need to have a data-depth and have a movable position (be in absolute position)
+
+
+class Parallax {
+  constructor(intensity, smoothing, zone) {
+    this.intensity = intensity;
+    this.zone = zone;
+    this.smoothing = smoothing;
+    this.elements = zone.querySelectorAll("[data-depth]");
+    this.mouse = { x: 0, y: 0 };
+    this.mouseDelta = { x: 0, y: 0 };
+    this.currentDelta = { x: 0, y: 0 };
+
+    zone.addEventListener("mousemove", event => {
+      this.mouse = { x: event.clientX, y: event.clientY };
+      let origin = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+      this.mouseDelta = {
+        x: event.clientX - origin.x,
+        y: event.clientY - origin.y
+      };
+    });
+  }
+
+  getMovement() {
+    return {
+      x: -this.currentDelta.x * this.intensity,
+      y: -this.currentDelta.y * this.intensity
+    };
+  }
+
+  update() {
+    this.currentDelta.x += (this.mouseDelta.x - this.currentDelta.x) * this.smoothing;
+    this.currentDelta.y += (this.mouseDelta.y - this.currentDelta.y) * this.smoothing;
+    let movement = this.getMovement();
+    this.elements.forEach(element => {
+      let depth = element.getAttribute("data-depth");
+      let target = { x: movement.x * depth, y: movement.y * depth };
+
+      TweenMax.set(element, {
+        x: target.x + "px",
+        y: target.y + "px",
+        force3D: true
+      });
+    });
+  }
+}
+
+
+//to optimize
+//parallax visitcard
+let visitCardParallax = new Parallax(0.3, 0.05, background);
+
+function update() {
+  visitCardParallax.update();
+  requestAnimationFrame(update);
+}
+update();
+
+//parallax projects
+const works = document.getElementById('works');
+
+let worksParallax = new Parallax(0.3, 0.05, works);
+
+function update2() {
+  worksParallax.update();
+  requestAnimationFrame(update2);
+}
+
+update2();
+
+
+
+
+
 
 
 /* burger menu */

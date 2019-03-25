@@ -8,7 +8,11 @@
   <meta name="description" content="Emilie Tombuyses, front-end developer junior">
   <link rel="stylesheet" href="scss/styles.scss">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="icon" href="assets/images/E-T.jpg">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script defer src="js/main.js"></script>
+
+  
   <title>Emilie Tombuyses - Front-end developer</title>
 </head>
 
@@ -39,7 +43,7 @@
 
   <main>
     <div id='background' class="welcome">
-      <div class="visitCard">
+      <div id='visitCard' data-depth="0.2" class="visitCard">
         <div class="movingBorder"></div>
         <div class="movingBorder"></div>
         <div class="movingBorder"> </div>
@@ -55,7 +59,7 @@
               <p id='backCardText' class='backCard__text'>I entered the world of web development a few months ago and
                 I am currently looking for a 3 months <strong>internship in Paris</strong>
                 between July and 21 September. I am also interested in an <strong>apprenticeship
-                  for next year</strong>. Don't hesitate to contact me if you are interested.</p>
+                  for next year</strong>. Don't hesitate to contact me!</p>
             </div>
           </div>
         </div>
@@ -76,12 +80,30 @@
         </div>
       </div>
     </div>
+    <!-- <div class="about">
+      <h3>Who am I ? </h3>
+      <p>I am a joung front-end developer who is currently studying web development at HETIC. It is only my first year and I already know that front-end developement is what I love the most.
+        For once I can say that I am having fun attending class and doing my homeworks. I like to regularly share my work with others and ask them questions about theirs.
+      </p>
+      <div class="slider">
+        <div class="slide1">
+        <h4>My passions</h4>
+          <div class="carroussel">
+            <div class="carousselimage1">
+            <img src="" alt="">
+            <p>Japon</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> -->
     <div id='works' class="works">
       <h3 class="works__title">My works</h3>
       <ul class="works__worksList worksList">
-        <li class="worksList__item"><a href="https://nespresso-redesign-school-project.netlify.com/" target="_blank" rel="noopener"><div class="worksList__blur"><h4 class="worksList__title">Nespresso redesign</h4><p class="worksList__description">Sass - HTML, CSS, JS</p></div><img src="assets/images/nespresso-400x300.jpg" alt="Nespresso homepage redesign"></a></li>    
-        <li class="worksList__item"><a href="https://yellowjacketgame.netlify.com/" target="_blank" rel="noopener"><div class="worksList__blur"><p class="worksList__title">Yellow Jacket</p></div><img src="assets/images/YellowJacket-400x300.jpg" alt="Aramni"></a></li>
-        <li class="worksList__item"><a href="https://armani-soufre.netlify.com/" target="_blank" rel="noopener"><div class="worksList__blur"><p class="worksList__title">Armani</p></div><img src="assets/images/armani-400x300.jpg" alt="Yellow Jacket miniature"></a></li>
+        <li class="worksList__item" data-depth="0.2"><a href="https://nespresso-redesign-school-project.netlify.com/" target="_blank" rel="noopener"><div class="worksList__blur"><h4 class="worksList__title">Nespresso redesign</h4><p class="worksList__description">Sass - HTML, CSS, JS</p></div><img src="assets/images/nespresso-400x300.jpg" alt="Nespresso homepage redesign"></a></li>    
+        <li class="worksList__item" data-depth="0.2"><a href="https://yellowjacketgame.netlify.com/" target="_blank" rel="noopener"><div class="worksList__blur"><p class="worksList__title">Yellow Jacket</p></div><img src="assets/images/YellowJacket-400x300.jpg" alt="Aramni"></a></li>
+        <li class="worksList__item" data-depth="0.2"><a href="https://armani-soufre.netlify.com/" target="_blank" rel="noopener"><div class="worksList__blur"><p class="worksList__title">Armani</p></div><img src="assets/images/armani-400x300.jpg" alt="Yellow Jacket miniature"></a></li>
       </ul>
     </div>
   </main>
