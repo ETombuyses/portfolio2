@@ -92,11 +92,10 @@ class Parallax {
   update() {
     if (window.innerWidth < 899) {
       this.elements.forEach(element => {
-        let target = { x: 0, y: 0 };
 
         TweenMax.set(element, {
-          x: target.x + "px",
-          y: target.y + "px",
+          x: 0 + "px",
+          y: 0 + "px",
           force3D: true
         });
       });
